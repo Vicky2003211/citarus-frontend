@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6fa;
+  }
+  
+  .dashboard-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .loading-spinner {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .vitals-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  .vitals-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 12px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .vitals-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .vitals-table tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+  }
+  
+  .vitals-table tbody tr:nth-child(even) {
+    background-color: #fafbfc;
+  }
+  
+  .notes-cell {
+    max-width: 200px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .no-data {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1200px) {
+    .vitals-table {
+      font-size: 12px;
+    }
+    
+    .vitals-table th,
+    .vitals-table td {
+      padding: 8px 6px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 10px;
+    }
+    
+    .dashboard-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .table-container {
+      border-radius: 4px;
+    }
+  }
+  
+
+  /* chart */
+
+  .charts-container {
+    margin-top: 40px;
+  }
+  
+  .charts-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

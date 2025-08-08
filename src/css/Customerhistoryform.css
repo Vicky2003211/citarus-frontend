@@ -1,0 +1,73 @@
+/* Container for the entire form */
+.history-form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #f9fafb;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Heading style */
+  .history-form-container h2 {
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+    font-weight: 600;
+  }
+  
+  /* Textarea styling */
+  .history-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border 0.3s;
+  }
+  
+  .history-textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+  }
+  
