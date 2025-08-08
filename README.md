@@ -11,7 +11,7 @@ npm install
 npm run dev
 
 
-#⚠️ Prerequisites
+# ⚠️ Prerequisites
 
 -Ensure you have the following installed:
 
