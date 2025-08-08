@@ -1,58 +1,69 @@
-# Elder Care Frontend - Routing Structure
+# 🩺 Elder Care Frontend
 
-## Overview
-This React application uses React Router DOM for navigation between different pages and components.
+A React-based frontend for managing elderly patient records, vitals, and dashboards. Built using Vite and React Router DOM, this application is designed to work in a role-based system with multiple user roles (Admin, Personal Care Manager, Adult Kid).
 
-## Routes
 
-### Public Routes
-- `/` - Redirects to `/login`
-- `/login` - User login/registration page
-- `/*` - Catch-all route that redirects to `/login`
 
-### Protected Routes (require authentication)
-- `/home` - Main dashboard/home page
-- `/customer-form` - Patient details form
-- `/customer-dashboard` - Calendar view with vitals data
-- `/customer-report` - Vitals entry dashboard
+## 🚀 Features
 
-## Navigation
+- 🔐 Role-based login (Admin, Adult Kid, Personal Care Manager)
+- 📄 Patient registration form
+- 📅 Calendar view for vitals monitoring
+- 📊 Vitals entry and history tracking
+- 📁 Patient history submission
+- 📋 Admin registration (by Citraverse Admin)
+- 📤 Logout functionality
+- 🔁 Responsive navbar with mobile drawer
 
-### From Login Page
-- Successful login redirects to `/home`
-- Registration option available on the same page
+---
 
-### From Navbar (available on all protected pages)
-- **Home** - Navigate to `/home`
-- **Patient Form** - Navigate to `/customer-form`
-- **Dashboard** - Navigate to `/customer-dashboard`
-- **Vitals Report** - Navigate to `/customer-report`
-- **Logout** - Redirects to `/login`
+## 🧭 Routing Structure
 
-## Components Structure
+### 🟢 Public Routes
 
-### Pages
-- `Home.jsx` - Main dashboard with greeting cards and section cards
-- `UserLogin.jsx` - Login/registration form
-- `Customerform.jsx` - Patient details entry form
-- `Customerdashboard.jsx` - Calendar view for vitals tracking
-- `Customerreport.jsx` - Vitals entry dashboard
+| Path       | Description                     |
+|------------|---------------------------------|
+| `/`        | Redirects to `/login`           |
+| `/login`   | Login page                      |
+| `/*`       | Catch-all redirects to `/login` |
 
-### Shared Components
-- `Navbar.jsx` - Navigation bar (present on all protected pages)
+### 🔒 Protected Routes
 
-## Authentication
-- Currently uses a simple demo authentication
-- Username: `admin`, Password: `1234`
-- No persistent authentication state (resets on page refresh)
+| Path                   | Description                       |
+|------------------------|-----------------------------------|
+| `/home`                | Home/Dashboard                    |
+| `/customer-form`       | Patient registration form         |
+| `/customer-dashboard`  | Calendar view with vitals         |
+| `/customer-report`     | Vitals data entry form            |
+| `/customer-history`    | History report for the patient    |
+| `/admin-registration`  | New user registration (admin only)|
 
-## Dependencies
-- `react-router-dom` - For routing functionality
-- `react-big-calendar` - For calendar component
-- `date-fns` - For date handling in calendar
+---
 
-## Getting Started
-1. Install dependencies: `npm install`
-2. Start development server: `npm run dev`
-3. Navigate to the application in your browser
-4. Login with demo credentials to access protected routes 
+## 🧩 Components
+
+### 📄 Pages
+
+- `Home.jsx` – Dashboard after login
+- `UserLogin.jsx` – Login form with credentials
+- `AdminRegistration.jsx` – Register new users
+- `Customerform.jsx` – Register new patients
+- `Customerdashboard.jsx` – Calendar with vitals
+- `Customerreport.jsx` – Vitals form
+- `Customerhistoryform.jsx` – History form
+
+### 🔁 Shared
+
+- `Navbar.jsx` – Top navigation with role-specific links
+
+---
+
+## 👥 Role-Based Navigation
+
+| Role                | Accessible Pages                                     |
+|---------------------|------------------------------------------------------|
+| Citraverse Admin    | Home, Patient Form, Vitals Report, History, Register |
+| Personal Care Mgr   | Home, Dashboard, Vitals Report                       |
+| Adult Kid           | Home, Dashboard                                      |
+
+---
